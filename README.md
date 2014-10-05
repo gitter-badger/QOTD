@@ -1,6 +1,4 @@
-jakesyl.github.io
-=================
+QOTD
+====
 
-My Personal Blog,
-
-Nothing to see here
+Quote of the Day
