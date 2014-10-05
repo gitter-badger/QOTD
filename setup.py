@@ -5,11 +5,11 @@ setup(
 
     ### Metadata
 
-    name='Engine',
+    name='QOTD',
 
     version='0.1.0',
 
-    description='Crawl the Web',
+    description='Gets a quote, and posts it ',
 
     long_description='Crawl the web...',
 
@@ -17,14 +17,14 @@ setup(
 
     license='Not Yours',
 
-    author='Jake Sylvestre, Alex Parson ',
+    author='Jake Sylvestre',
     author_email='jakesyl@gmail.com',
 
-    maintainer='Alex Parson, Jake Sylvestre',
-    maintainer_email='alexparson1@gmail.com',
+    maintainer=' Jake Sylvestre',
+    maintainer_email='jakesyl@gmail.com',
 
     classifiers=[
-        'Development Status :: 1 - Planning',
+        'Development Status :: 2 - writing',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: MIT License',
         'Natural Language :: English',
@@ -36,13 +36,10 @@ setup(
     ### Dependencies
 
     install_requires=[
-        'utm',
-        'SQLAlchemy>=0.6',
-        'BrokenPackage>=0.7,<1.0',#change these
+
     ],
 
     dependency_links=[
-        'git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1',
     ],
 
     ### Contents
