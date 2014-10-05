@@ -3,53 +3,50 @@ from setuptools import setup
 
 setup(
 
-            ### Metadata
+    ### Metadata
 
-                name='aerofiles',
+    name='Engine',
 
-                    version='0.1.0',
+    version='0.1.0',
 
-                        description='waypoint file readers and writers for aviation',
+    description='Crawl the Web',
 
-                            long_description=...,
+    long_description='Crawl the web...',
 
-                                url='https://github.com/Turbo87/aerofiles',
+    url='https://github.com/jakesyl/Engine',
 
-                                    download_url='https://pypi.python.org/pypi/aerofiles',
+    license='Not Yours',
 
-                                        license='MIT',
+    author='Jake Sylvestre, Alex Parson ',
+    author_email='jakesyl@gmail.com',
 
-                                            author='Tobias Bieniek',
-                                                author_email='tobias.bieniek@gmx.de',
+    maintainer='Alex Parson, Jake Sylvestre',
+    maintainer_email='alexparson1@gmail.com',
 
-                                                    maintainer='John Doe',
-                                                        maintainer_email='john.doe@lavabit.com',
+    classifiers=[
+        'Development Status :: 1 - Planning',
+        'Intended Audience :: Developers',
+        'License :: OSI Approved :: MIT License',
+        'Natural Language :: English',
+        'Operating System :: OS Independent',
+        'Programming Language :: Python',
+        'Topic :: Scientific/Engineering :: GIS',
+    ],
 
-                                                            classifiers=[
-                                                                        'Development Status :: 1 - Planning',
-                                                                                'Intended Audience :: Developers',
-                                                                                        'License :: OSI Approved :: MIT License',
-                                                                                                'Natural Language :: English',
-                                                                                                        'Operating System :: OS Independent',
-                                                                                                                'Programming Language :: Python',
-                                                                                                                        'Topic :: Scientific/Engineering :: GIS',
-                                                                                                                            ],
+    ### Dependencies
 
-                                                                ### Dependencies
+    install_requires=[
+        'utm',
+        'SQLAlchemy>=0.6',
+        'BrokenPackage>=0.7,<1.0',#change these
+    ],
 
-                                                                    install_requires=[
-                                                                                'utm',
-                                                                                        'SQLAlchemy>=0.6',
-                                                                                                'BrokenPackage>=0.7,<1.0',
-                                                                                                    ],
+    dependency_links=[
+        'git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1',
+    ],
 
-                                                                        dependency_links=[
-                                                                                    'git+https://github.com/Turbo87/utm.git@v0.3.1#egg=utm-0.3.1',
-                                                                                        ],
+    ### Contents
 
-                                                                            ### Contents
+    packages=find_packages(exclude=['tests*']),
 
-                                                                                packages=find_packages(exclude=['tests*']),
-
-                                                                                )
-
+)
