@@ -5,9 +5,12 @@ import datetime
 from time import gmtime, strftime
 from random import randrange as ran
 import subprocess as sp
+import os 
 
+os.chdir("/home/jakesyl/Quotes/pyQOTD/src/")
 class main:
     def main_func(self):
+        os.chdir("/home/jakesyl/Quotes/pyQOTD/src/")
         response = urlopen('http://www.iheartquotes.com/api/v1/random')
         html = response.read()
         filename = str(strftime("%Y-%m-%d", gmtime()))
