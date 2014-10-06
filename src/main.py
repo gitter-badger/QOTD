@@ -10,11 +10,12 @@ class main:
         html = response.read()
         filename = str(strftime("%Y-%m-%d", gmtime()))
         filename += str(ran(90))
+        filename += '.md'
         with open(filename, mode = 'a', encoding = 'utf-8') as a_file:
             a_file.write(str(html))
-        gitpush = sp.check_output('git add -A && git commit -m "daily file" && git push -f', stderr=sp.STDOUT, shell=True)
+        gitpush = sp.check_output('git add -A && git pull && git commit -m "daily file" && git push -f', stderr=sp.STDOUT, shell=True)
         print(gitpush)
-        command = 'mv
-        gitpush = sp.check_output('git add -A && git commit -m "daily file" && git push -    f', stderr=sp.STDOUT, shell=True)
+        command = "mv " + filename +  ' ~/Quotes/QOTD/_posts/ && cd ~/Quotes/QOTD/ && git add -A && git commit -m "added new posts" && git pull &&  git push && cd ~/Quotes/pyQOTD/ && rm -rf ' + filename +  ' && git add -A && git pull && git commit -m "added daily file" && git push'
+        gitpush = sp.check_output(command , stderr=sp.STDOUT, shell=True)
 mc = main() 
 print(main.main_func(mc))
