@@ -14,5 +14,5 @@ class main:
             a_file.write(str(html))
         gitpush = sp.check_output('git add -A && git commit -m "daily file" && git push', stderr=sp.STDOUT, shell=True)
         print(gitpush)
-mc = main()
+mc = main() 
 print(main.main_func(mc))
