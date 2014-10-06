@@ -1,3 +1,5 @@
+ #!/usr/bin/python3
+
 from  urllib.request import urlopen
 import datetime 
 from time import gmtime, strftime
