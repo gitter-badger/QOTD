@@ -12,7 +12,7 @@ class main:
         filename += str(ran(90))
         with open(filename, mode = 'a', encoding = 'utf-8') as a_file:
             a_file.write(str(html))
-        gitpush = sp.check_output('git add -A && git commit -m "daily file" && git push', stderr=sp.STDOUT, shell=True)
+        gitpush = sp.check_output('git add -A && git commit -m "daily file" && git push -f', stderr=sp.STDOUT, shell=True)
         print(gitpush)
 mc = main() 
 print(main.main_func(mc))
