@@ -21,7 +21,8 @@ class main:
         gitpush = sp.check_output('git add -A && git pull && git commit -m "daily file" && git push -f', stderr=sp.STDOUT, shell=True)
         print(gitpush)
         commands = ["mv " + filename +  ' ~/Quotes/QOTD/_posts/ &&', 'cd ~/Quotes/QOTD/ && echo 2 && git add -A && echo 3 && git commit -m "added new posts" && echo 4 && git pull &&  git push', 'cd ~/Quotes/pyQOTD/ && rm -rf ' + filename +  ' && git add -A && git pull && git commit -m "added daily file" && echo hi && git push && echo done']
-        gitpush = sp.check_output(command , stderr=sp.STDOUT, shell=True)
-        print(gitpush)
+        for command in commands:
+         gitpush = sp.check_output(command , stderr=sp.STDOUT, shell=True)
+         print(gitpush)
 mc = main() 
 print(main.main_func(mc))
