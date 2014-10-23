@@ -20,7 +20,7 @@ class main:
             a_file.write(str(html))
         gitpush = sp.check_output('git add -A && git pull && git commit -m "daily file" && git push -f', stderr=sp.STDOUT, shell=True)
         print(gitpush)
-        commands = ["mv " + filename +  ' ~/Quotes/QOTD/_posts/', 'cd ~/Quotes/QOTD/ && git add -A',  'cd ~/Quotes/QOTD/ && git commit -m "added new posts"',  'cd ~/Quotes/QOTD/ && git pull', 'cd ~/Quotes/QOTD/ &&  git push', 'cd ~/Quotes/pyQOTD/ && rm -rf ' + filename +  ' && git add -A && git pull && git commit -m "added daily file" && echo hi && git push && echo done']
+        commands = ["mv " + filename +  ' ~/Quotes/QOTD/_posts/', 'cd ~/Quotes/QOTD/ && git add -A',  'cd ~/Quotes/QOTD/ && git commit -m "added new posts"',  'cd ~/Quotes/QOTD/ && git pull', 'cd ~/Quotes/QOTD/ &&  git push -f', 'cd ~/Quotes/pyQOTD/ && rm -rf ' + filename +  ' && git add -A && git pull && git commit -m "added daily file" && echo hi && git push -f && echo done']
         for command in commands:
          gitpush = sp.check_output(command , stderr=sp.STDOUT, shell=True)
          print(gitpush)
