@@ -10,7 +10,7 @@ title:            Jake's Blog
 tagline:          'A series of ramblings about code among other things'
 description:      "Because I probably don't have anything better to do" 
 url:              http://jakesyl.github.io/
-baseurl:          '/'
+baseurl:          '/QOTD/'
 paginate:         5
 
 author:
